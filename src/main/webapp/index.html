@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SSE Client</title>
+	<script>
+		var evtSource = new EventSource("http://localhost:8080/simple-sse/api/echo");
+		
+		evtSource.onmessage = function(e) {
+			console.log("Server side event: " + e.data);
+		}
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
